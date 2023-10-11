@@ -159,7 +159,7 @@ class Controller:
             return
         # print(f"Clicked on {params}")
         cell = self.getCelluleGrilleDemineur(self.demineur, params)
-        print("Cellule cliquée :", cell, "bouton :", button)
+        #print("Cellule cliquée :", cell, "bouton :", button)
         if self.isVisibleCellule(cell) and button in [1, 3]:
             return
         if button == 1 and self.getAnnotationCellule(cell) != const.FLAG:
@@ -183,7 +183,7 @@ class Controller:
             else:
                 # Debug
                 _cell = self.getCelluleGrilleDemineur(self.demineur, params)
-                print(_cell)
+                #print(_cell)
                 # End Debug
                 lst = self.decouvrirGrilleDemineur(self.demineur, params)
                 # print('updating', lst)
@@ -206,7 +206,7 @@ class Controller:
             lst_content, lst_flag = self.simplifierToutGrilleDemineur(self.demineur)
             self.update_content_cells(lst_content)
             self.update_flag_cells(lst_flag)
-        print("Etat final de la cellule :", cell)
+        #print("Etat final de la cellule :", cell)
         # n = randint(0, 10)
         # if n <= 8:
         #     self.win.set_state(params, n)
